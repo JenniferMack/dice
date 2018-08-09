@@ -60,3 +60,17 @@ func TestHardWay(t *testing.T) {
 		}
 	}
 }
+
+func TestProb(t *testing.T) {
+	var graph = make(map[int]int)
+	sides := 6
+	d1, d2 := NewDie(sides), NewDie(sides)
+	for i := 0; i < 10000; i++ {
+		r1, r2 := d1.Roll(), d2.Roll()
+		graph[r1+r2] += 1
+	}
+	fmt.Println("Results of 10,000 throws")
+	for i := 2; i <= 12; i++ {
+		fmt.Printf("%2d : %4d : %5.2f%%\n", i, graph[i], (float64(graph[i])/float64(10000))*100)
+	}
+}
