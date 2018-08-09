@@ -1,0 +1,3 @@
+# dice
+
+Dice game engine
