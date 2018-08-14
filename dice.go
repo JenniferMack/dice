@@ -47,7 +47,14 @@ func getRand(l int) (r int, err error) {
 func IsHardWay(d1, d2 int) (b bool, s string) {
 	if d1 == d2 {
 		b = true
-		s = fmt.Sprintf("%d the hard way!", d1+d2)
+		switch d1 + d2 {
+		case 2:
+			s = fmt.Sprintf("a %d! Snake Eyes!", d1+d2)
+		case 12:
+			s = fmt.Sprintf("a %d! Boxcars!", d1+d2)
+		default:
+			s = fmt.Sprintf("%d the hard way!", d1+d2)
+		}
 	}
 	return
 }
