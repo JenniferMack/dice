@@ -49,9 +49,9 @@ func IsHardWay(d1, d2 int) (b bool, s string) {
 		b = true
 		switch d1 + d2 {
 		case 2:
-			s = fmt.Sprintf("a %d! Snake Eyes!", d1+d2)
+			s = fmt.Sprintf("%d! Snake Eyes!", d1+d2)
 		case 12:
-			s = fmt.Sprintf("a %d! Boxcars!", d1+d2)
+			s = fmt.Sprintf("%d! Boxcars!", d1+d2)
 		default:
 			s = fmt.Sprintf("%d the hard way!", d1+d2)
 		}
